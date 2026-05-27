@@ -123,7 +123,7 @@ project/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/MuttaiahgaruVardhini/multimodal-emotion-recognition.git
+git clone https://github.com/MuttaiahgariVardhini/multimodal-emotion-recognition.git
 
 cd multimodal-emotion-recognition
 ```
