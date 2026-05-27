@@ -24,7 +24,9 @@ Dataset Used:
 ---
 
 # Dataset
-Dataset link: https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess
+
+Dataset Link:
+https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess
 
 The TESS dataset contains:
 
@@ -44,18 +46,28 @@ Emotion Classes:
 - Sad
 - Surprise
 
+Note:
+The dataset is not included in this repository due to large file size.
+
+Please download the dataset from the provided link and place it inside:
+
+data/TESS Toronto emotional speech set data/
+
 ---
 
 # Models Used
 
 ## Speech Pipeline
+
 - MFCC Feature Extraction
 - BiLSTM Model
 
 ## Text Pipeline
+
 - Embedding + BiLSTM Model
 
 ## Fusion Pipeline
+
 - Fusion of Speech and Text Embeddings
 - Fully Connected Neural Network
 
@@ -67,15 +79,29 @@ project/
 ├── data/
 ├── models/
 │   ├── speech_pipeline/
+│   │   ├── preprocess.py
+│   │   ├── speech_model.py
+│   │   ├── train.py
+│   │   └── test.py
+│   │
 │   ├── text_pipeline/
+│   │   ├── preprocess.py
+│   │   ├── text_model.py
+│   │   ├── train.py
+│   │   └── test.py
+│   │
 │   └── fusion_pipeline/
+│       ├── preprocess.py
+│       ├── model.py
+│       ├── train.py
+│       └── test.py
 │
 ├── Results/
 │   └── plots/
 │
 ├── README.md
 ├── requirements.txt
--->Report
+├── Final_Report.pdf
 
 ---
 
@@ -95,17 +121,18 @@ project/
 # Installation
 
 ## Clone Repository
-Optional(if needed)
-Please download it from the provided link and place it inside:
 
-data/TESS Toronto emotional speech set data/
+```bash
+git clone https://github.com/MuttaiahgaruVardhini/multimodal-emotion-recognition.git
 
-git clone https://github.com/MuttaiahgaruVardhini/multimodal-emotion-recognition
 cd multimodal-emotion-recognition
+```
 
 ## Install Requirements
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
@@ -113,31 +140,67 @@ pip install -r requirements.txt
 
 ## Speech Pipeline
 
+### Preprocessing
+
+```bash
 python models/speech_pipeline/preprocess.py
+```
 
+### Training
+
+```bash
 python models/speech_pipeline/train.py
+```
 
+### Testing
+
+```bash
 python models/speech_pipeline/test.py
+```
 
 ---
 
 ## Text Pipeline
 
+### Preprocessing
+
+```bash
 python models/text_pipeline/preprocess.py
+```
 
+### Training
+
+```bash
 python models/text_pipeline/train.py
+```
 
+### Testing
+
+```bash
 python models/text_pipeline/test.py
+```
 
 ---
 
 ## Fusion Pipeline
 
+### Preprocessing
+
+```bash
 python models/fusion_pipeline/preprocess.py
+```
 
+### Training
+
+```bash
 python models/fusion_pipeline/train.py
+```
 
+### Testing
+
+```bash
 python models/fusion_pipeline/test.py
+```
 
 ---
 
@@ -147,7 +210,7 @@ python models/fusion_pipeline/test.py
 |-------|----------------|
 | Speech Model | 97% – 98% |
 | Text Model | ~1% |
-| Fusion Model | 97%  |
+| Fusion Model | 97% – 98% |
 
 ---
 
@@ -185,6 +248,7 @@ Results/plots/
 # Conclusion
 
 This project successfully compares:
+
 - Speech Emotion Recognition
 - Text Emotion Recognition
 - Multimodal Fusion Emotion Recognition
