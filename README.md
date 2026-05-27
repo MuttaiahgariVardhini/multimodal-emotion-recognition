@@ -72,9 +72,9 @@ data/TESS Toronto emotional speech set data/
 - Fully Connected Neural Network
 
 ---
-
 # Folder Structure
 
+```text
 project/
 ├── data/
 ├── models/
@@ -102,8 +102,7 @@ project/
 ├── README.md
 ├── requirements.txt
 ├── Final_Report.pdf
-
----
+```
 
 # Technologies Used
 
